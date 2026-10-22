@@ -271,17 +271,34 @@ Do the following:
 
 ### Question 9: `print_receipt`
 
-`print_receipt` prints each item on its own line, then the word `Total:` on
-one line and the amount on the next. Change it so the items print on a single
-line separated by `", "`, and the total prints as one line.
+`print_receipt(items, total)` is called with a _list_ (not a string) called `items` and a float
+called `total`.
+
+For example:
+
+```py
+print_receipt(["Tea", "Mug"], 11.25)
+```
+
+It then prints each item on its own line, then the word `Total:` on
+one line and the amount on the next. 
+
+```text
+Tea
+Mug
+-----
+Total:
+11.25
+```
+
+Change it so the items print on a single line separated by `", "`, and the total prints as one line below it.
 
 ```text
 Tea, Mug
 Total: $11.25
 ```
 
-Rather than using an f-string here, use the separator keyword. Remember to format
-the dollar amount to two decimal places as well!
+_Hint: Look into the string.join(list) method_
 
 ## Debug
 
